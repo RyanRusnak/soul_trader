@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * OBSIDIAN TELEMETRY design tokens (see obsidian_telemetry/DESIGN.md)
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces */
+  --color-obsidian: #09090b;
+  --color-carbon: #111113;
+  --color-panel: #201f22;
+  --color-panel-high: #2a2a2c;
+  --color-panel-highest: #353437;
+  --color-edge: #27272a;
+  --color-edge-soft: #3c4a42;
+
+  /* Text */
+  --color-bone: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-zinc: #71717a;
+
+  /* Signals */
+  --color-lime: #10b981;
+  --color-lime-dim: #4edea3;
+  --color-lime-bright: #6ffbbe;
+  --color-cyan: #00f0ff;
+  --color-cyan-dim: #00dbe9;
+  --color-amber: #f59e0b;
+  --color-danger: #ff5f56;
+  --color-danger-dim: #ffb4ab;
+
+  /* Type */
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Brutalist geometry: everything is sharp */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-full: 0px;
+
+  /* Motion */
+  --animate-led: led-blink 1.4s steps(1, end) infinite;
+  --animate-led-fast: led-blink 0.8s steps(1, end) infinite;
+  --animate-marquee: marquee 22s linear infinite;
+  --animate-scan: scan 6s linear infinite;
+  --animate-flicker: flicker 3.5s linear infinite;
+  --animate-sweep: sweep 2.4s ease-in-out infinite;
+  --animate-consent-pulse: consent-pulse 1.15s ease-in-out infinite;
+}
+
+@keyframes led-blink {
+  0%,
+  55% {
+    opacity: 1;
+  }
+  56%,
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(2000%);
+  }
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  93% {
+    opacity: 0.4;
+  }
+  94% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.7;
+  }
+  98% {
+    opacity: 1;
+  }
+}
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+/* Attention pulse for unsigned consent controls after a blocked claim */
+@keyframes consent-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+    border-color: var(--color-edge-soft);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.55);
+    border-color: var(--color-lime);
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scrollbar-color: var(--color-panel-high) var(--color-obsidian);
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-obsidian);
+    color: var(--color-bone);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior-y: none;
+  }
+  ::selection {
+    background: var(--color-lime);
+    color: #00211a;
+  }
+  /* Thin, unobtrusive scrollbars that fit the brutalist frame */
+  * {
+    scrollbar-width: thin;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: var(--color-obsidian);
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-panel-high);
+    border: 1px solid var(--color-edge);
+  }
+  input,
+  textarea,
+  select,
+  button {
+    font-family: inherit;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Custom utilities
+ * ------------------------------------------------------------------ */
+
+/* 45-degree chamfer on the top-right + bottom-left corners */
+@utility chamfer {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+@utility chamfer-sm {
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+/* Single-corner tag chamfer (top-right only) */
+@utility chamfer-tr {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+/* Hairline grid backdrop used behind hero/editorial panels */
+@utility micro-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Telemetry glow for focused / confirmed states */
+@utility glow-lime {
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
+}
+@utility glow-cyan {
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.22);
+}
+
+/* Corner tick-marks to emphasize calibrated construction */
+@utility corner-ticks {
+  position: relative;
+}
+@utility corner-ticks-after {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: var(--color-lime);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+}
