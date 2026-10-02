@@ -27,7 +27,7 @@ export function Footer() {
           <div className="space-y-4 lg:col-span-6">
             <div className="flex items-center gap-3">
               <span className="font-display text-[22px] font-bold uppercase tracking-tight text-bone">
-                SOLE TRADER CORP // TELEMETRY LINK
+                SOULTRADR CORP // TELEMETRY LINK
               </span>
               <span className="border border-lime/40 bg-lime/10 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-lime">
                 LIVE TAP
@@ -68,7 +68,7 @@ export function Footer() {
                 LEGAL EXCLUSION CLAUSE
               </span>
               <p className="max-w-xl text-sm leading-relaxed text-muted/80">
-                SOLE TRADER is not responsible for emotional collateral, lost
+                SOULTRADR is not responsible for emotional collateral, lost
                 plausible deniability, or targeted midnight insomnia ads. All
                 transactions are settled via automated corporate acquisition of
                 personal privacy assets.
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 pt-6 font-mono text-[11px] uppercase tracking-[0.08em] text-muted sm:flex-row">
-          <p>© 2026 SOLE TRADER CORP // UNENCRYPTED SURVEILLANCE WEAR</p>
+          <p>© 2026 SOULTRADR CORP // UNENCRYPTED SURVEILLANCE WEAR</p>
           <div className="flex items-center gap-2 text-zinc">
             <LedDot tone="lime" />
             <span>DATA EXTRACTION PIPELINE: OPERATIONAL</span>

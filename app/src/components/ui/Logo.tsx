@@ -29,7 +29,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       {!compact && (
         <span className="flex flex-col pr-2">
           <span className="font-display text-base font-bold leading-none tracking-wider text-bone whitespace-nowrap">
-            SOLE TRADER
+            SOULTRADR
           </span>
           <span className="mt-1 font-mono text-[10px] font-bold leading-none tracking-[0.2em] text-lime whitespace-nowrap">
             DATA // COMMERCE ARCHITECTURE

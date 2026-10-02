@@ -33,7 +33,7 @@ const TENETS = [
 export function ManifestoPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 md:px-8">
-      <SectionHeading index="DOC //" title="THE SOLE TRADER MANIFESTO" />
+      <SectionHeading index="DOC //" title="THE SOULTRADR MANIFESTO" />
       <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted">
         For a century, the footwear industry asked you for money. We ask for
         something honest. This document explains, in plain language, everything

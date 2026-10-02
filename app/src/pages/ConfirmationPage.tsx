@@ -35,7 +35,7 @@ export function ConfirmationPage() {
   }
 
   const tweetText = encodeURIComponent(
-    `I just acquired ${order.items.length} pair(s) of SOLE TRADER telemetry footwear for $0.00. All I gave up was everything. Record #${order.recordId}`,
+    `I just acquired ${order.items.length} pair(s) of SOULTRADR telemetry footwear for $0.00. All I gave up was everything. Record #${order.recordId}`,
   )
   const referral = `${window.location.origin}${window.location.pathname}#/product/conduit-runner?ref=${order.recordId}`
 
@@ -159,7 +159,7 @@ export function ConfirmationPage() {
               <p className="text-bone">SURRENDER CONTRACT #{order.recordId}</p>
               <p className="mt-2">
                 1. The UNDERSIGNED (hereafter "SUBJECT") transfers all rights, title,
-                and interest in the listed data assets to SOLE TRADER CORP (hereafter
+                and interest in the listed data assets to SOULTRADR CORP (hereafter
                 "US, OBVIOUSLY").
               </p>
               <p className="mt-2">
@@ -211,7 +211,7 @@ export function ConfirmationPage() {
               MANDATORY WORD OF MOUTH
             </span>
             <p className="mt-3 border border-edge bg-obsidian p-3 text-sm text-muted">
-              "I just acquired {order.items.length} pair(s) of SOLE TRADER telemetry
+              "I just acquired {order.items.length} pair(s) of SOULTRADR telemetry
               footwear for $0.00. All I gave up was everything. Record #{order.recordId}"
             </p>
             <div className="mt-3 flex flex-col gap-2">

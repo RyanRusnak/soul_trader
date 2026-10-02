@@ -2,7 +2,7 @@ import type { Order } from '../store/StoreContext'
 
 export function downloadReceipt(order: Order) {
   const receipt = {
-    issuer: 'SOLE TRADER CORP // UNENCRYPTED SURVEILLANCE WEAR',
+    issuer: 'SOULTRADR CORP // UNENCRYPTED SURVEILLANCE WEAR',
     record_id: order.recordId,
     issued_at: new Date(order.ts).toISOString(),
     cash_charged: 0.0,

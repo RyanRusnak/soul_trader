@@ -4,7 +4,7 @@ import { SectionHeading } from '../components/ui/SectionHeading'
 const CLAUSES = [
   {
     t: 'PRIVACY ABANDONMENT POLICY',
-    b: 'By wearing, viewing, or thinking about SOLE TRADER footwear, you abandon all privacy claims retroactively, including privacy you experienced before founding-era records of this company existed. Abandonment is automatic, global, and inheritable by your next of kin.',
+    b: 'By wearing, viewing, or thinking about SOULTRADR footwear, you abandon all privacy claims retroactively, including privacy you experienced before founding-era records of this company existed. Abandonment is automatic, global, and inheritable by your next of kin.',
   },
   {
     t: 'TERMS OF INTERCEPTION',
@@ -16,7 +16,7 @@ const CLAUSES = [
   },
   {
     t: 'EMOTIONAL COLLATERAL WAIVER',
-    b: 'SOLE TRADER is not liable for: targeted midnight insomnia ads; discovering your gait is "suboptimal"; the mattress company knowing your sleep score before you do; or any regret expressed in the Statement of Disillusionment, which is now marketing copy.',
+    b: 'SOULTRADR is not liable for: targeted midnight insomnia ads; discovering your gait is "suboptimal"; the mattress company knowing your sleep score before you do; or any regret expressed in the Statement of Disillusionment, which is now marketing copy.',
   },
   {
     t: 'JURISDICTION & VENUE',
@@ -24,7 +24,7 @@ const CLAUSES = [
   },
   {
     t: 'SATIRE DISCLOSURE',
-    b: 'SOLE TRADER CORP is a fictional entity. No actual telemetry is collected, transmitted, syndicated, or sold by this website. Any resemblance to real surveillance-commerce practices is the point. Your data stays in your browser (localStorage), which is still more than most companies offer.',
+    b: 'SOULTRADR CORP is a fictional entity. No actual telemetry is collected, transmitted, syndicated, or sold by this website. Any resemblance to real surveillance-commerce practices is the point. Your data stays in your browser (localStorage), which is still more than most companies offer.',
   },
 ]
 
