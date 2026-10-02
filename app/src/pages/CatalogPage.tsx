@@ -45,7 +45,7 @@ export function CatalogPage() {
             </h2>
           </div>
           <p className="max-w-4xl text-base leading-relaxed text-muted">
-            Introducing Conduit. The first shoe ever made that streams your data
+            The first shoe ever made that streams your data
             directly to the cloud without the help of a smartphone. Simply live
             your life day to day and let us do the tracking. Whether you are at
             home, the grocery store, or on an evening run, Conduit is
