@@ -27,7 +27,8 @@ jobs:
       - name: Build static site
         working-directory: app
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+          # custom domain serves at the domain root, not a github.io project subpath
+          BASE_PATH: /
         run: |
           npm ci
           npm run build
