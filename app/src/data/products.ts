@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     heroImage: img('casual-studio.png'),
     gallery: [
       { src: img('casual-studio.png'), label: 'STUDIO PLINTH' },
-      { src: img('casual-card.jpg'), label: 'FIELD RENDER' },
+      { src: img('casual-thumb-1.png'), label: 'BEACON MACRO' },
       { src: '', label: 'CAD DATA 3D', kind: 'cad' },
     ],
     hotspots: [
@@ -262,7 +262,7 @@ export const PRODUCTS: Product[] = [
     heroImage: img('boot-studio.png'),
     gallery: [
       { src: img('boot-studio.png'), label: 'TACTICAL PLINTH' },
-      { src: img('boot-card.jpg'), label: 'FIELD RENDER' },
+      { src: img('boot-thumb-1.png'), label: 'BUCKLE MACRO' },
       { src: '', label: 'CAD DATA 3D', kind: 'cad' },
     ],
     hotspots: [

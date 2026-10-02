@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { DropCountdown } from '../components/DropCountdown'
 import { ProductCard } from '../components/ProductCard'
+import { ConduitHero3D } from '../components/hero3d/ConduitHero3D'
 import { Chip } from '../components/ui/Chip'
 import { LedDot } from '../components/ui/LedDot'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -51,14 +52,12 @@ export function CatalogPage() {
             with you—listening, recording, and learning. Unencumbered mobility.
             Total passive synchronization.
           </p>
-          <div className="group relative overflow-hidden border border-edge bg-obsidian shadow-2xl">
-            <div className="relative flex aspect-[21/9] max-h-[460px] w-full items-center justify-center overflow-hidden md:aspect-[21/9]">
-              <img
-                src={`${import.meta.env.BASE_URL}images/hero-conduit.jpg`}
+          <div className="relative overflow-hidden border border-edge bg-obsidian shadow-2xl">
+            <div className="relative flex aspect-[16/9] max-h-[520px] w-full items-center justify-center overflow-hidden md:aspect-[21/9]">
+              <ConduitHero3D
+                fallbackSrc={`${import.meta.env.BASE_URL}images/hero-conduit.jpg`}
                 alt="Anonymous Conduit smart sneaker with emerald telemetry accent and biometric carbon sole"
-                className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent" />
               <div className="absolute left-2 top-2 flex items-center gap-2 border border-edge/60 bg-obsidian/90 px-2 py-0.5 backdrop-blur-md">
                 <LedDot tone="lime" />
                 <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-lime">
