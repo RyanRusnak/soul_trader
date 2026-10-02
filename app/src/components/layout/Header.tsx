@@ -48,11 +48,6 @@ export function Header() {
               </svg>
               CART ({cartCount})
             </button>
-            <img
-              src={`${import.meta.env.BASE_URL}images/avatar-cyborg.png`}
-              alt="Operative profile"
-              className="hidden h-8 w-8 object-cover ring-1 ring-edge sm:block"
-            />
             <button
               type="button"
               aria-label="Toggle navigation"
